@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.disconnect = exports.getCharonErrorState = exports.getCurrentState = exports.connect = exports.prepare = exports.onStateChangedListener = exports.removeOnStateChangeListener = exports.STATE_CHANGED_EVENT_NAME = exports.CharonErrorState = exports.VpnState = void 0;
 const react_native_1 = require("react-native");
 var VpnState;
 (function (VpnState) {
