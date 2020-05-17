@@ -41,3 +41,6 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
+
+# Example
+example/
