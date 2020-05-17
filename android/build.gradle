@@ -50,7 +50,7 @@ apply plugin: 'de.undercouch.download'
 
 // Download prebuilt native libs.
 task downloadNaticeLib(type: Download) {
-    src 'https://github.com/X-dea/Flutter_VPN/releases/download/v0.6.0/strongswan_libs_v5.8.1.zip'
+    src 'https://github.com/sijav/react-native-ip-sec-vpn/releases/download/v1.0.0/strongswan_libs_v5.8.1.zip'
     dest "$buildDir/native.zip"
 }
 
