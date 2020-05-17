@@ -1,7 +1,7 @@
 {
   "name": "react-native-ip-sec-vpn",
   "title": "React Native Ip Sec Vpn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native IPSec VPN Module",
   "homepage": "https://github.com/sijav/react-native-ip-sec-vpn#readme",
   "main": "index.js",
@@ -25,7 +25,11 @@
     "baseUrl": "https://github.com/sijav/react-native-ip-sec-vpn"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "ikev",
+    "ipsec",
+    "ipsec vpn",
+    "vpn"
   ],
   "author": {
     "name": "Sijav",
