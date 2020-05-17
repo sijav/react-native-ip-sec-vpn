@@ -23,10 +23,10 @@ export declare const onStateChangedListener: (callback: (state: {
     state: VpnState;
     charonState: CharonErrorState;
 }) => void) => EmitterSubscription;
-export declare const prepare: () => void;
+export declare const prepare: () => Promise<void>;
 export declare const connect: (address: string, username: string, password: string, vpnType?: string, mtu?: number) => Promise<void>;
 export declare const getCurrentState: () => Promise<VpnState>;
 export declare const getCharonErrorState: () => Promise<CharonErrorState>;
-export declare const disconnect: () => Promise<VpnState>;
+export declare const disconnect: () => Promise<void>;
 declare const _default: any;
 export default _default;
