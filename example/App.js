@@ -147,7 +147,7 @@ export const App = () => {
                   title="Connect"
                   onPress={() =>
                     connect(credentials.address, credentials.username, credentials.password)
-                      .then((_res) => console.log('connect: ', _res))
+                      .then(() => console.log('connected'))
                       .catch(console.log)
                   }
                 />
@@ -155,7 +155,7 @@ export const App = () => {
                   title="Disconnect"
                   onPress={() =>
                     disconnect()
-                      .then((_res) => console.log('disconnect: ', _res))
+                      .then(() => console.log('disconnect: '))
                       .catch(console.log)
                   }
                 />
