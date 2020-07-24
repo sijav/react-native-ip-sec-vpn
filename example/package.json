@@ -1,7 +1,6 @@
 {
   "name": "example",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -9,16 +8,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "16.11.0",
-    "react-native": "0.62.2",
-    "react-native-ip-sec-vpn": "link:../"
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-ip-sec-vpn": "1.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/runtime": "^7.9.6",
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^26.0.1",
-    "eslint": "^7.0.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "2.0.5"
   },
