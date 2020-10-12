@@ -145,6 +145,7 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
                     profile.setGateway(bundle.getString("Address"));
                     profile.setUsername(bundle.getString("UserName"));
                     profile.setPassword(bundle.getString("Password"));
+                    profile.setPsk(bundle.getString("Psk"));
                     profile.setMTU(bundle.getInt("MTU"));
                     profile.setVpnType(VpnType.fromIdentifier(bundle.getString("VpnType")));
                     profile.setSelectedAppsHandling(0);
@@ -264,6 +265,7 @@ public class CharonVpnService extends VpnService implements Runnable, VpnStateSe
                             writer.setValue("connection.port", mCurrentProfile.getPort());
                             writer.setValue("connection.username", mCurrentProfile.getUsername());
                             writer.setValue("connection.password", mCurrentProfile.getPassword());
+                            writer.setValue("connection.psk", mCurrentProfile.getPsk());
                             writer.setValue("connection.local_id", mCurrentProfile.getLocalId());
                             writer.setValue("connection.remote_id", mCurrentProfile.getRemoteId());
                             writer.setValue("connection.certreq", (mCurrentProfile.getFlags() & VpnProfile.FLAGS_SUPPRESS_CERT_REQS) == 0);

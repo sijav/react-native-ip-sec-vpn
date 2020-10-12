@@ -71,7 +71,7 @@ public class RNIpSecVpn extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void connect(String address, String username, String password, String vpnType, Integer mtu, Promise promise) {
+    public void connect(String address, String username, String password, String psk, String vpnType, Integer mtu, Promise promise) {
         if(_RNIpSecVpnStateHandler.vpnStateService == null){
             promise.reject("E_SERVICE_NOT_STARTED", "Service not started yet");
             return;
@@ -96,6 +96,7 @@ public class RNIpSecVpn extends ReactContextBaseJavaModule {
         profileInfo.putString("UserName", username);
         profileInfo.putString("Password", password);
         profileInfo.putString("VpnType", password);
+        profileInfo.putString("Psk", psk);
         profileInfo.putInt("MTU", mtu);
         _RNIpSecVpnStateHandler.vpnStateService.connect(profileInfo, true);
         promise.resolve(null);
