@@ -84,9 +84,19 @@ class RNIpSecVpn: RCTEventEmitter {
         return [ "stateChanged" ]
     }
     
+
     @objc
     func prepare(_ findEventsWithResolver: RCTPromiseResolveBlock, rejecter: RCTPromiseRejectBlock) -> Void {
-
+        let vpnManager = NEVPNManager.shared()
+        //https://stackoverflow.com/questions/39056600/nevpnmanager-check-is-connected-after-restart-the-app/47689509
+        vpnManager.loadFromPreferences { (error) in
+            if error != nil {
+                print(error.debugDescription)
+            }
+            else{
+                print("No error from loading VPN viewDidLoad")
+            }
+        }
         // Register to be notified of changes in the status. These notifications only work when app is in foreground.
         NotificationCenter.default.addObserver(forName: NSNotification.Name.NEVPNStatusDidChange, object : nil , queue: nil) {
             notification in let nevpnconn = notification.object as! NEVPNConnection
@@ -115,9 +125,22 @@ class RNIpSecVpn: RCTEventEmitter {
                 p.passwordReference = kcs.load(key: "password")
                 p.authenticationMethod = NEVPNIKEAuthenticationMethod.none
 
+                //Set IKE SA (Security Association) Params...
+                p.ikeSecurityAssociationParameters.encryptionAlgorithm = .algorithmAES256GCM
+                p.ikeSecurityAssociationParameters.integrityAlgorithm = .SHA512
+                p.ikeSecurityAssociationParameters.diffieHellmanGroup = .group20
+                p.ikeSecurityAssociationParameters.lifetimeMinutes = 1440
+                //p.ikeSecurityAssociationParameters.isProxy() = false
+
+                //Set CHILD SA (Security Association) Params...
+                p.childSecurityAssociationParameters.encryptionAlgorithm = .algorithmAES256GCM
+                p.childSecurityAssociationParameters.integrityAlgorithm = .SHA512
+                p.childSecurityAssociationParameters.diffieHellmanGroup = .group20
+                p.childSecurityAssociationParameters.lifetimeMinutes = 1440
                 p.useExtendedAuthentication = true
                 p.disconnectOnSleep = false
-
+                p.enablePFS = true
+                
                 vpnManager.protocolConfiguration = p
                 vpnManager.isEnabled = true
                 
