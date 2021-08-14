@@ -9,14 +9,14 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   react-native-ip-sec-vpn
                    DESC
-  s.homepage     = "https://github.com/github_account/react-native-ip-sec-vpn"
+  s.homepage     = "https://github.com/jackywxd/react-native-ip-sec-vpn"
   # brief license entry:
   s.license      = "MIT"
   # optional - use expanded license entry instead:
   # s.license    = { :type => "MIT", :file => "LICENSE" }
-  s.authors      = { "Your Name" => "sinajavaheri@email.com" }
-  s.platforms    = { :ios => "9.0" }
-  s.source       = { :git => "https://github.com/sijav/react-native-ip-sec-vpn.git", :tag => "#{s.version}" }
+  s.authors      = { "Your Name" => "jackywxd@gmail.com" }
+  s.platforms    = { :ios => "12.0" }
+  s.source       = { :git => "https://github.com/jackywxd/react-native-ip-sec-vpn.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,c,m,swift}"
   s.requires_arc = true

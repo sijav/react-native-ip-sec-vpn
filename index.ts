@@ -68,6 +68,17 @@ export const connect: (address: string, username: string, password: string, vpnT
   mtu
 ) => NativeModules.RNIpSecVpn.connect(address || "", username || "", password || "", vpnType || "", mtu || 1400);
 
+export const save: (address: string, username: string, p12password: string, p12b64?: string, commonname?: string, remoteidentifier?: string, ondemand?: boolean) => Promise<void> = (
+  address,
+  username,
+  p12password,
+  p12b64,
+  commonname,
+  remoteidentifier,
+  ondemand
+) => NativeModules.RNIpSecVpn.save(address || "", username || "", p12password || "", p12b64 || "", commonname || "", remoteidentifier || "", ondemand || false);
+export const start: () => Promise<void> = NativeModules.RNIpSecVpn.start;
+
 // get current state
 export const getCurrentState: () => Promise<VpnState> = NativeModules.RNIpSecVpn.getCurrentState;
 
