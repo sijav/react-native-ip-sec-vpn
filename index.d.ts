@@ -25,6 +25,8 @@ export declare const onStateChangedListener: (callback: (state: {
 }) => void) => EmitterSubscription;
 export declare const prepare: () => Promise<void>;
 export declare const connect: (address: string, username: string, password: string, vpnType?: string, mtu?: number) => Promise<void>;
+export declare const save: (address: string, username: string, p12password: string, p12b64?: string, commonname?: string, remoteidentifier?: string, ondemand?: boolean) => Promise<void>;
+export declare const start: () => Promise<void>;
 export declare const getCurrentState: () => Promise<VpnState>;
 export declare const getCharonErrorState: () => Promise<CharonErrorState>;
 export declare const disconnect: () => Promise<void>;

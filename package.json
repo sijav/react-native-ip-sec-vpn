@@ -1,9 +1,9 @@
 {
-  "name": "react-native-ip-sec-vpn",
+  "name": "@jackywxd/react-native-ip-sec-vpn",
   "title": "React Native Ip Sec Vpn",
-  "version": "1.1.0",
+  "version": "1.2.5",
   "description": "React Native IPSec VPN Module",
-  "homepage": "https://github.com/sijav/react-native-ip-sec-vpn#readme",
+  "homepage": "https://github.com/jackywxd/react-native-ip-sec-vpn#readme",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -21,8 +21,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sijav/react-native-ip-sec-vpn.git",
-    "baseUrl": "https://github.com/sijav/react-native-ip-sec-vpn"
+    "url": "git+https://github.com/jackywxd/react-native-ip-sec-vpn.git",
+    "baseUrl": "https://github.com/jackywxd/react-native-ip-sec-vpn"
   },
   "keywords": [
     "react-native",
@@ -32,8 +32,8 @@
     "vpn"
   ],
   "author": {
-    "name": "Sijav",
-    "email": "sinajavaheri@gmail.com"
+    "name": "jackywxd",
+    "email": "me@jackywu.ca"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
@@ -46,7 +46,7 @@
     "@types/react-native": "0.63.2",
     "prettier": "2.0.5",
     "react": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "^0.64.0",
     "typescript": "3.9.7"
   }
 }

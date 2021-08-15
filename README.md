@@ -1,12 +1,24 @@
-# react-native-ip-sec-vpn
+# @jackywxd/react-native-ip-sec-vpn
+
+This package is forked from https://github.com/sijav/react-native-ip-sec-vpn, with some minor modifications to fit my usage:
+1. Load the VPN config before the notification so getCurrentState() can return correct state after App is relaunched from background
+2. Support strong crypto:
+	<key>DiffieHellmanGroup</key>
+	<integer>20</integer>
+	<key>EncryptionAlgorithm</key>
+	<string>AES-256-GCM</string>
+	<key>IntegrityAlgorithm</key>
+	<string>SHA2-512</string>
+	<key>LifeTimeInMinutes</key>
+	<integer>1440</integer>
 
 ## Getting started
 
 Plugin can be installed using npm<br>
 With yarn:<br>
-`$ yarn add react-native-ip-sec-vpn --save`<br>
+`$ yarn add @jackywxd/react-native-ip-sec-vpn --save`<br>
 Or with npm:<br>
-`$ npm install react-native-ip-sec-vpn --save`<br>
+`$ npm install @jackywxd/react-native-ip-sec-vpn --save`<br>
 
 ### Mostly automatic installation
 
